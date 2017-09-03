@@ -18,7 +18,7 @@ public class AccountController {
 
     @RequestMapping(value = "/register" , method = RequestMethod.POST)
     public Account register(@ModelAttribute Account account) {
-        return accountService.register(account);
+        return accountService.register(account); 
     }
 
     @RequestMapping(value = "login" , method = RequestMethod.GET)
