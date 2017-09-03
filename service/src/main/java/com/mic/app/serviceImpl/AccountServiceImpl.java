@@ -13,7 +13,7 @@ public class AccountServiceImpl implements AccountService {
     private AccountRepository accountRepository;
 
     public Account login(Account account) {
-        return accountRepository.findByLoginAccountAndPassword(account);
+        return accountRepository.findByLoginAccountAndPassword(account.getLoginAccount(),account.getPassword());
     }
 
     public Account register(Account account) {
