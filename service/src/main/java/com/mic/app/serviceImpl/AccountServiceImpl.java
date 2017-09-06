@@ -6,6 +6,8 @@ import com.mic.app.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AccountServiceImpl implements AccountService {
 
@@ -13,10 +15,14 @@ public class AccountServiceImpl implements AccountService {
     private AccountRepository accountRepository;
 
     public Account login(Account account) {
-        return accountRepository.findByLoginAccountAndPassword(account.getLoginAccount(),account.getPassword());
+        return accountRepository.findByAccountAndPassword(account.getAccount(),account.getPassword());
     }
 
     public Account register(Account account) {
         return accountRepository.save(account);
+    }
+
+    public List<Account> findAll() {
+        return accountRepository.findAll();
     }
 }

@@ -1,61 +1,59 @@
 package com.mic.app.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "account")
 public class Account {
 
+    public Account() {
+    }
+
     @Id
+    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int ID;
 
-    private String loginAccount;
+    @Column(name="account")
+    private String account;
 
+    @Column(name="password")
     private String password;
 
+    @Column(name="role")
     private String role;
 
-    protected Account() {
-    }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getLoginAccount() {
-        return loginAccount;
-    }
-
-    public void setLoginAccount(String loginAccount) {
-        this.loginAccount = loginAccount;
+    public String getAccount() {
+        return account;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getRole() {
         return role;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setRole(String role) {
         this.role = role;
     }
 
-    public Account(String loginAccount, String password, String role) {
-        this.loginAccount = loginAccount;
-        this.password = password;
-        this.role = role;
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public int getID() {
+
+        return ID;
     }
 }
