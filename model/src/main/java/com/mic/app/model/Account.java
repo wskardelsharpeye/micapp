@@ -1,15 +1,14 @@
 package com.mic.app.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "account")
 public @Data class Account {
-
-    public Account() {
-    }
 
     @Id
     @Column(name="id")

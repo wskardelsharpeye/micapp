@@ -11,5 +11,4 @@ public interface AccountRepository extends JpaRepository<Account,Long> {
 
     public Account findByAccountAndPassword(String account, String password);
 
-
 }
