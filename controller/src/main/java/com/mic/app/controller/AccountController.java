@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value = "/account")
 public class AccountController {
@@ -18,17 +20,17 @@ public class AccountController {
 
     @RequestMapping(value = "/register" , method = RequestMethod.POST)
     public Account register(@ModelAttribute Account account) {
-        return accountService.register(account); 
+        return accountService.register(account);
     }
 
-    @RequestMapping(value = "login" , method = RequestMethod.GET)
+    @RequestMapping(value = "/login" , method = RequestMethod.GET)
     public Account login(@ModelAttribute Account account) {
         return accountService.login(account);
     }
 
-    @RequestMapping(value = "test" , method = RequestMethod.GET)
-    public String login() {
-        return "index";
+    @RequestMapping(value = "/findAll" , method = RequestMethod.GET)
+    public List<Account> login() {
+        return accountService.findAll();
     }
 
 }
