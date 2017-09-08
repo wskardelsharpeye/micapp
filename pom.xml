@@ -33,7 +33,7 @@
         <repository>
             <id>spring-libs-release</id>
             <name>Spring Releases</name>
-            <url>https://repo.spring.io/libs-release</url>
+            <url>http://maven.oschina.net/content/groups/public</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>

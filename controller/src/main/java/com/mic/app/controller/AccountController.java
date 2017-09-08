@@ -23,12 +23,12 @@ public class AccountController {
         return accountService.register(account);
     }
 
-    @RequestMapping(value = "login" , method = RequestMethod.GET)
+    @RequestMapping(value = "/login" , method = RequestMethod.GET)
     public Account login(@ModelAttribute Account account) {
         return accountService.login(account);
     }
 
-    @RequestMapping(value = "test" , method = RequestMethod.GET)
+    @RequestMapping(value = "/findAll" , method = RequestMethod.GET)
     public List<Account> login() {
         return accountService.findAll();
     }
