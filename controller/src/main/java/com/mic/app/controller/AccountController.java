@@ -27,7 +27,6 @@ public class AccountController {
     public Account login(@ModelAttribute Account account) {
         return accountService.login(account);
     }
-
     @RequestMapping(value = "/findAll" , method = RequestMethod.GET)
     public List<Account> login() {
         return accountService.findAll();

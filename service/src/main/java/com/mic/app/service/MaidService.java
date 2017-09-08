@@ -9,4 +9,6 @@ public interface MaidService {
     public List<Maid> findAll();
 
     public Maid save(Maid maid);
+
+    public Maid update(Maid maid);
 }

@@ -21,4 +21,8 @@ public class MaidServiceImpl implements MaidService{
     public Maid save(Maid maid) {
         return maidRepository.save(maid);
     }
+
+    public Maid update(Maid maid) {
+        return maidRepository.save(maid);
+    }
 }

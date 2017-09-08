@@ -6,6 +6,7 @@ import com.mic.app.service.MaidService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import sun.misc.Request;
 
 import java.util.List;
 
@@ -24,5 +25,10 @@ public class MaidController {
     @RequestMapping(value = "/save" , method = RequestMethod.POST)
     public Maid save(@RequestBody Maid maid) {
         return maidService.save(maid);
+    }
+
+    @RequestMapping(value = "update" , method = RequestMethod.POST)
+    public Maid update(@RequestBody Maid maid) {
+        return maidService.update(maid);
     }
 }
