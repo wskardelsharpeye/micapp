@@ -36,6 +36,7 @@
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</prop>
+                <prop key="hibernate.default_schema">mic</prop>
             </props>
         </property>
 

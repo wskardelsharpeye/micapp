@@ -19,7 +19,6 @@
                         http://www.springframework.org/schema/tx
                         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
     <!-- 设置使用注解的类所在的jar包 -->
-
     <context:component-scan base-package="com.mic.app.controller, com.mic.app.serviceImpl" />
 
     <mvc:default-servlet-handler/>
