@@ -14,8 +14,8 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
-    public Account login(Account account) {
-        return accountRepository.findByAccountAndPassword(account.getAccount(),account.getPassword());
+    public Account login(String account,String password) {
+        return accountRepository.findByAccountAndPassword(account,password);
     }
 
     public Account register(Account account) {
