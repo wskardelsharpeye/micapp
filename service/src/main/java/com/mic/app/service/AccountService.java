@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface AccountService {
 
-     Account login(Account account);
+     Account login(String account,String password);
 
      Account register(Account account);
 

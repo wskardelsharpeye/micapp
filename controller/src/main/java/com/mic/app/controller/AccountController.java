@@ -4,10 +4,7 @@ package com.mic.app.controller;
 import com.mic.app.service.AccountService;
 import com.mic.app.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,14 +16,18 @@ public class AccountController {
     private AccountService accountService;
 
     @RequestMapping(value = "/register" , method = RequestMethod.POST)
-    public Account register(@ModelAttribute Account account) {
+    public Account register(@RequestBody Account account) {
         return accountService.register(account);
     }
 
     @RequestMapping(value = "/login" , method = RequestMethod.GET)
-    public Account login(@ModelAttribute Account account) {
-        return accountService.login(account);
+    public Account login(@RequestParam(value = "account") String account,
+                          @RequestParam(value = "password") String password) {
+        Account aAccount = accountService.login(account,password);
+        if(null == aAccount) return new Account();
+        else return aAccount;
     }
+
     @RequestMapping(value = "/findAll" , method = RequestMethod.GET)
     public List<Account> login() {
         return accountService.findAll();
