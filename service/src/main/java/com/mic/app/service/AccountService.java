@@ -12,4 +12,6 @@ public interface AccountService {
 
      List<Account> findAll();
 
+     Account findById(int id);
+
 }

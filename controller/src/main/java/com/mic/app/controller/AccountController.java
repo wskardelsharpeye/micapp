@@ -15,7 +15,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @RequestMapping(value = "/register" , method = RequestMethod.POST)
+    @RequestMapping(value = "/save" , method = RequestMethod.POST)
     public Account register(@RequestBody Account account) {
         return accountService.register(account);
     }

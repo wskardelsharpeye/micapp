@@ -14,7 +14,7 @@ public @Data class Maid {
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int ID;
+    private int id;
 
     @Column(name="first_name")
     private String firstName;
@@ -38,7 +38,7 @@ public @Data class Maid {
     private String address;
 
     @Column(name="expectation_salary")
-    private int expectionSalary;
+    private String expectionSalary;
 
     @Column(name="working_years")
     private int workingYears;

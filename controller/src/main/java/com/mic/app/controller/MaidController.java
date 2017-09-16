@@ -31,4 +31,9 @@ public class MaidController {
     public Maid update(@RequestBody Maid maid) {
         return maidService.update(maid);
     }
+
+    @RequestMapping(value = "/saveProfile" , method = RequestMethod.POST)
+    public Maid saveProfile(@RequestBody Maid maid) {
+        return maidService.saveProfile(maid);
+    }
 }
