@@ -11,9 +11,9 @@ import javax.persistence.*;
 public @Data class Account {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id", nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int ID;
+    private int id;
 
     @Column(name="account")
     private String account;
